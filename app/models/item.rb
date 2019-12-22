@@ -18,5 +18,22 @@
 
 class Item < ApplicationRecord
   belongs_to :trip
-  
+
+  require 'csv'
+
+  def self.import_from_csv(file)
+    # CSV.foreach(file.path, headers: true) do |row|
+    CSV.foreach(file, headers: true) do |row|
+      Item.create!({
+        date: row[0],
+        description: row[1],
+        price: row[2],
+        qty: row[3],
+        trip_id: row[4]
+      })
+    end
+  end
+
+
+
 end
