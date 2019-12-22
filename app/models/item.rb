@@ -7,18 +7,9 @@
 #  description :string
 #  price       :float
 #  qty         :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  trip_id     :bigint
-#
-# Indexes
-#
-#  index_items_on_trip_id  (trip_id)
 #
 
 class Item < ApplicationRecord
-  belongs_to :trip
-
   require 'csv'
 
   def self.import_from_csv(file)
@@ -28,8 +19,7 @@ class Item < ApplicationRecord
         date: row[0],
         description: row[1],
         price: row[2],
-        qty: row[3],
-        trip_id: row[4]
+        qty: row[3]
       })
     end
   end

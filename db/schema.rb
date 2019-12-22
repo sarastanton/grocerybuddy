@@ -16,21 +16,10 @@ ActiveRecord::Schema.define(version: 2019_12_22_042634) do
   enable_extension "plpgsql"
 
   create_table "items", force: :cascade do |t|
-    t.bigint "trip_id"
     t.date "date"
     t.string "description"
     t.integer "qty"
     t.float "price"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["trip_id"], name: "index_items_on_trip_id"
-  end
-
-  create_table "trips", force: :cascade do |t|
-    t.date "date"
-    t.float "total"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
