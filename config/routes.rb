@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :trips
+  # resources :trips
   resources :items
 
   get '/top_frequent_items', to: 'stats#top_frequent_items'
