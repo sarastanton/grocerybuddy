@@ -3,5 +3,4 @@ class ItemsSerializer < ActiveModel::Serializer
              :date
              :description
              :price
-             :qty
 end

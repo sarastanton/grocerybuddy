@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
   private
 
   def resource_params
-    params.require(:item).permit(:date, :description, :qty, :price)
+    params.require(:item).permit(:date, :description, :price)
   end
 
 end

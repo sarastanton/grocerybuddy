@@ -6,7 +6,6 @@
 #  date        :date
 #  description :string
 #  price       :float
-#  qty         :integer
 #
 
 require 'rails_helper'

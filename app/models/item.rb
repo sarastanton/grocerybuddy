@@ -6,7 +6,6 @@
 #  date        :date
 #  description :string
 #  price       :float
-#  qty         :integer
 #
 
 class Item < ApplicationRecord
@@ -18,8 +17,7 @@ class Item < ApplicationRecord
       Item.create!({
         date: row[0],
         description: row[1],
-        price: row[2],
-        qty: row[3]
+        price: row[2]
       })
     end
   end
