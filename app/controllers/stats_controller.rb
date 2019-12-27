@@ -26,17 +26,22 @@ class StatsController < ApplicationController
     total_spend = Item.sum(:price)
     trip_count = Item.pluck(:date).uniq.count
     avg_spend = total_spend / trip_count
-    render json: avg_spend
+    render json: avg_spend.round(2)
   end
 
   def avg_time_between_trips
     dates = Item.pluck(:date).uniq
     date_span = (dates.max - dates.min).to_i
     avg_between_dates = date_span / (dates.length - 1)
-    render json: (date_span / (dates.length - 1).to_f).round(1)
+    render json: (date_span / (dates.length - 1).to_f).round(0)
   end
 
   def avg_time_between_purchases
+    items = Item.where(description: params[:description]).all
+    item_dates = items.pluck(:date).uniq
+    date_span = (item_dates.max - item_dates.min).to_i
+    item_count = items.count
+    render json: (date_span / (item_count - 1).to_f).round(0)
   end
 
   def last_trip_total
