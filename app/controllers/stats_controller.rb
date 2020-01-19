@@ -55,6 +55,18 @@ class StatsController < ApplicationController
     render json: ActiveRecord::Base.connection.execute(query)
   end
 
+  def average_monthly_spend
+    query = <<~SQL
+      SELECT date_trunc('month', date) AS mon
+      FROM items
+      GROUP BY mon
+      ORDER BY mon DESC
+    SQL
+    month_count = ActiveRecord::Base.connection.execute(query).count
+    total_spend_sum = Item.sum(:price)
+    render json: (total_spend_sum / month_count).to_f.round(2)
+  end
+
   def month_spend_actual_to_budget
     actual = Item.where(
       "EXTRACT('month' FROM date) = ?
@@ -64,4 +76,5 @@ class StatsController < ApplicationController
     budget = 350
     render json: { actual: actual, percentage: ((actual / budget) * 100).round(1) }
   end
+
 end

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/avg_spend_per_trip', to: 'stats#avg_spend_per_trip'
   get '/avg_time_between_trips', to: 'stats#avg_time_between_trips'
   get '/avg_time_between_purchases', to: 'stats#avg_time_between_purchases'
+  get '/average_monthly_spend', to: 'stats#average_monthly_spend'
   get '/last_trip_total', to: 'stats#last_trip_total'
   get '/budget_to_actual', to: 'stats#month_spend_actual_to_budget'
 
