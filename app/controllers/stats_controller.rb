@@ -2,13 +2,15 @@ class StatsController < ApplicationController
 
   def stats
     render json: {
-      top_frequent_items: Item.top_frequent_items,
-      top_spend_items: Item.top_spend_items,
-      avg_spend_per_trip: Item.avg_spend_per_trip,
-      avg_time_between_trips: Item.avg_time_between_trips,
-      last_trip_total: Item.last_trip_total,
-      average_monthly_spend: Item.average_monthly_spend,
-      month_spend_actual_to_budget: Item.month_spend_actual_to_budget
+      data: [
+        { title: "Top 5 most frequent items", type: "list", data: Item.top_frequent_items },
+        { title: "Top 5 highest spend items", type: "list", data: Item.top_spend_items },
+        { title: "Average spent per trip", type: "dollar", data: Item.avg_spend_per_trip },
+        { title: "Average time between trips", type: "stat", data: Item.avg_time_between_trips },
+        { title: "Last trip total", type: "list", data: Item.last_trip_total },
+        { title: "Average monthly spend", type: "dollar", data: Item.average_monthly_spend },
+        # { title: "month_spend_actual_to_budget", type: "stat", data: Item.month_spend_actual_to_budget }
+      ]
     }
   end
 
