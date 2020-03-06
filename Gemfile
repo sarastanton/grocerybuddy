@@ -43,6 +43,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rspec-rails'
 gem 'factory_bot_rails'
-gem 'rack-cors'
 gem 'active_model_serializers'
 gem 'annotate'
