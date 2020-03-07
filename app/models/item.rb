@@ -35,7 +35,7 @@ class Item < ApplicationRecord
 
   def self.top_spend_items
     query = <<~SQL
-      SELECT description, CONCAT('$', SUM (price)) as total
+      SELECT description, SUM (price) as total
       FROM items
       GROUP BY description
       ORDER BY total DESC
