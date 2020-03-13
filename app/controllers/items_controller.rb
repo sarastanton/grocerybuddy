@@ -16,9 +16,7 @@ class ItemsController < ApplicationController
   end
 
   def csv_upload
-    # TODO - first load items and ask user to confirm they want to upload
-    # TODO - add download of blank form with headers
-    Item.import_from_csv(params[:file])
+    Item.import_from_csv(params[:file].tempfile)
   end
 
   private
