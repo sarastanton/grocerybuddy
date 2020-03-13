@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.order('description ASC, date DESC') if params[:sort] == "description"
-    @items = Item.order('date DESC') if params[:sort] == "date"
+    @items = Item.order('date DESC, description ASC') if params[:sort] == "date"
     render json: @items, status: 200
   end
 
