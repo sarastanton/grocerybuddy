@@ -10,6 +10,8 @@
 
 class Item < ApplicationRecord
   extend ActionView::Helpers::TextHelper
+  # for 'pluralize' helper
+
   require 'csv'
 
   def self.import_from_csv(file)
@@ -57,7 +59,7 @@ class Item < ApplicationRecord
     "#{pluralize((date_span / (dates.length - 1).to_f).round(0), 'day')}"
   end
 
-  # TODO: 
+  # TODO:
   # def self.avg_time_between_purchases(item_desc)
   #   items = Item.where(description: item_desc).all
   #   item_dates = items.pluck(:date).uniq
