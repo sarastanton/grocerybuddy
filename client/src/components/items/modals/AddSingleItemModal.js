@@ -11,7 +11,7 @@ const AddSingleItemModal = (props) => {
   }
 
   const submitForm = event => {
-    fetch("http://saras-grocery-buddy.herokuapp.com/api/items", {
+    fetch("https://saras-grocery-buddy.herokuapp.com/api/items", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

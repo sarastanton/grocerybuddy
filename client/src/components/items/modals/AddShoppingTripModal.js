@@ -8,7 +8,7 @@ const AddShoppingTripModal = (props) => {
       let fileData = new FormData();
       fileData.append('file', csv);
 
-      fetch("http://saras-grocery-buddy.herokuapp.com/api/csv_upload", {
+      fetch("https://saras-grocery-buddy.herokuapp.com/api/csv_upload", {
         method: "POST",
         body: fileData
       })

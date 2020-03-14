@@ -7,7 +7,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const stats = await fetch(`http://saras-grocery-buddy.herokuapp.com/api/stats`)
+        const stats = await fetch(`https://saras-grocery-buddy.herokuapp.com/api/stats`)
         .then((response) => {
           return response.json();
         });

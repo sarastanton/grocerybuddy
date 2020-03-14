@@ -9,7 +9,7 @@ const Table = (props) => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const items = await fetch(`http://saras-grocery-buddy.herokuapp.com/api/items?sort=${props.sort}`)
+        const items = await fetch(`https://saras-grocery-buddy.herokuapp.com/api/items?sort=${props.sort}`)
         .then((response) => {
           return response.json();
         });
