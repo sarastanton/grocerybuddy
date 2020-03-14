@@ -2,7 +2,7 @@
 
 Gain insight into your grocery shopping trends with Grocery Buddy! Users can enter their grocery purchases (one item at a time, or upload a CSV file with data for an entire shopping trip) and view stats on shopping trends. 
 
-**Stats include: ** 
+**Stats include:** 
 
 - Top 5 most frequently purchased items
 - Top 5 highest dollar spend items
