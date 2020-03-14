@@ -3,7 +3,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
     create_table :items do |t|
       t.date :date
       t.string :description
-      t.float :price
+      t.decimal :price, precision: 6, scale: 2
     end
   end
 end

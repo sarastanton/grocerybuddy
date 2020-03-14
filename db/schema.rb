@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_12_22_042634) do
   create_table "items", force: :cascade do |t|
     t.date "date"
     t.string "description"
-    t.float "price"
+    t.decimal "price", precision: 6, scale: 2
   end
 
 end

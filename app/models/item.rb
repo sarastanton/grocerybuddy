@@ -5,7 +5,7 @@
 #  id          :bigint           not null, primary key
 #  date        :date
 #  description :string
-#  price       :float
+#  price       :decimal(6, 2)
 #
 
 class Item < ApplicationRecord
