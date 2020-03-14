@@ -1,6 +1,7 @@
 {
   "name": "grocery-buddy",
   "engines": {
+    "npm": "6.9.0",
     "node": "6.11.2"
   },
   "scripts": {
