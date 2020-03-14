@@ -2,7 +2,7 @@
   "name": "grocery-buddy",
   "engines": {
     "npm": "6.9.0",
-    "node": "6.11.2"
+    "node": "10.19.0"
   },
   "scripts": {
     "build": "cd client && npm install && npm run build && cd ..",
