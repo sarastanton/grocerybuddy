@@ -51,7 +51,7 @@ const Table = (props) => {
                 <tr key={item.id}>
                   <td className="col-4"> {item.date} </td>
                   <td className="col-4"> {item.description} </td>
-                  <td className="col-4"> ${item.price.toFixed(2)} </td>
+                  <td className="col-4"> ${parseFloat(item.price).toFixed(2)} </td>
                 </tr>
               )}
             </tbody>
