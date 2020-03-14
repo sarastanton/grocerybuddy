@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# FEATURES
+* Rails API back end
+* React front end
+* React Hooks
+* React Router
+* Bootstrap UI
+* CSS Grid
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# FUTURE ADDITIONS
+* Edit/delete items from Items table
+* Info popover to explain stats
+* Form validation for new item submission (single item)
+* Form validation for new item submission (CSV upload - file format)
