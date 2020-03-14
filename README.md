@@ -23,6 +23,7 @@ Gain insight into your grocery shopping trends with Grocery Buddy! Users can ent
 
 ## FUTURE ADDITIONS
 
+* Responsive/mobile-friendly UI
 * Edit/delete items from Items table
 * Info popover to explain stats
 * Form validation for new item submission (single item)
