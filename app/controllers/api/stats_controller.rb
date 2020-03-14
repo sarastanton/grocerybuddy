@@ -1,4 +1,4 @@
-class StatsController < ApplicationController
+class Api::StatsController < ApplicationController
 
   def stats
     render json: {
